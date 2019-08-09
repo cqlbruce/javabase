@@ -36,9 +36,9 @@ public class RsaService {
         long eulerVal = (p-1)*(q-1);
 
         //随机地取一个正整数 e , 1 < e < &(n) 且(e,&(n))=1 , 将e公开
-        do{
-            e = Math.abs(random.nextLong()) % eulerVal + 1 ;
-        }while(RSAUtil.gcd(e,eulerVal));
+//        do{
+//            e = Math.abs(random.nextLong()) % eulerVal + 1 ;
+//        }while(RSAUtil.gcd(e,eulerVal));
 
 
     }
