@@ -70,13 +70,32 @@ public class BinaryTree extends AbstractTree{
         while (current.data != data){
             parentNode = current;
             if(current.data > data){
-
+                isLeftNode = true ;
+                current = current.leftNode;
+            }else{
+                isLeftNode = false;
+                current = current.rightNode;
             }
-
-
+            if(current == null){
+                return false;
+            }
         }
 
+        if(current.leftNode == null && current.rightNode == null ){
 
+            if(current == root){
+                root = null ;
+            }else if (isLeftNode){
+                //如果要删除的节点为父节点的左节点 把父节点的左节点置为空
+                parentNode.leftNode = null ;
+            }else{
+                parentNode.rightNode = null ;
+            }
+        }
+
+        if(current.leftNode == null && current.rightNode){
+
+        }
 
 
         return false;
