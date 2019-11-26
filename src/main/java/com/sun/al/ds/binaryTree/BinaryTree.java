@@ -80,9 +80,8 @@ public class BinaryTree extends AbstractTree{
                 return false;
             }
         }
-
+//        此节点为叶子节点
         if(current.leftNode == null && current.rightNode == null ){
-
             if(current == root){
                 root = null ;
             }else if (isLeftNode){
@@ -91,12 +90,41 @@ public class BinaryTree extends AbstractTree{
             }else{
                 parentNode.rightNode = null ;
             }
+            return true ;
         }
 
-        if(current.leftNode == null && current.rightNode){
-
+        //2当前节点有一个节点
+        if(current.leftNode == null && current.rightNode != null){
+            if(root == current){
+                root = current.rightNode;
+            }else if(isLeftNode){
+                parentNode.leftNode = current.rightNode;
+            }else{
+                parentNode.rightNode = current.rightNode;
+            }
+        }else if (current.leftNode !=null && current.rightNode == null){
+            if (root == current){
+                root = current.leftNode;
+            }else if (isLeftNode){
+                parentNode.leftNode = current.leftNode;
+            }else {
+                parentNode.rightNode = current.leftNode;
+            }
         }
 
+        //3 当前节点有两个节点
+        if(current.leftNode !=null && current.rightNode != null){
+            //获取删除节点的后继节点
+            Node successor = getSuccessor(current);
+            if (root == current){
+                root = successor;
+            }else if(isLeftNode){
+                parentNode.leftNode = successor;
+            }else {
+                parentNode.rightNode = successor;
+            }
+            return false;
+        }
 
         return false;
     }
@@ -119,9 +147,5 @@ public class BinaryTree extends AbstractTree{
         }
         return successor;
     }
-
-
-
-
 
 }
