@@ -228,11 +228,9 @@ public class AVLTree<T extends Comparable<T>> {
         print(tree.right,tree.element,  1);
     }
 
-
     public void print(){
         if(mRoot != null)
             print(mRoot , mRoot.element , 0);
-
     }
 
 
