@@ -2,6 +2,8 @@ package com.sun.al.ds.binaryTreemine;
 
 public class BinaryTree {
 
+    private TreeNode root ;
+
     //树结点
     class TreeNode{
         int key ;
@@ -40,25 +42,68 @@ public class BinaryTree {
     }
 
     //删除
-    public void delete(TreeNode node , TreeNode root ){
+    public boolean delete(int data){
 
-        TreeNode parentNode = node ;
-        TreeNode current = node ;
-
+        TreeNode parentNode = root ;
+        TreeNode current = root ;
         boolean isleft = false ;
-
-//        while(){
-//
-//
-//        }
-        if (null == node.left && null == node.right){
-
-
+        while(current.key != data){
+            parentNode = current;
+            if(data > current.key){
+                current = current.right;
+            }
+            if(data <current.key){
+                current = current.left;
+                isleft = true;
+            }
+            if (current == null){
+                return false ;
+            }
         }
+        //该节点为叶子结点
+        if (null == current.left && null == current.right){
+            if(current == root){
+                root = null ;
+            }else if(isleft){
+                parentNode.left = null ;
+            }else{
+                parentNode.right = null;
+            }
+            return true;
+        }
+
+        //有一个叶子结点
+        if(null == current.left&&null != current.right){
+            if (root == current){
+                root = current.right ;
+            }else if(isleft){
+                parentNode.left = current.right;
+            }else {
+                parentNode.right = current.right ;
+            }
+        }else if(null != current.left&& null == current.right){
+            if(root == current){
+                root = current.left;
+            }else if(isleft){
+                parentNode.left = current.left;
+            }else {
+                parentNode.right = current.left;
+            }
+        }
+
+        //有两个结点
+
+
+
+        return false;
+    }
+
+    public TreeNode getSuccessor(TreeNode node){
 
 
 
     }
+
 
     //查询
     public TreeNode find(int value , TreeNode root){
