@@ -123,7 +123,7 @@ public class BinaryTree extends AbstractTree{
             }else {
                 parentNode.rightNode = successor;
             }
-            return false;
+            successor.leftNode=current.leftNode;
         }
 
         return false;
