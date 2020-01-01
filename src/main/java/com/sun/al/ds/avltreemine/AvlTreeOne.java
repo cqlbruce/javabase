@@ -41,7 +41,30 @@ public class AvlTreeOne<T extends Comparable<T>> {
         return null ;
     }
 
+    public Node<T> leftLeftRotation(Node<T> k2){
+        Node<T> k1 ;
+        k1 = k2.left ;
+        k2.left = k1.right;
+        k1.right = k2 ;
+        k1.height = max(height(k1.left) , k2.height) + 1 ;
+        k2.height = max(height(k2.left),height(k1.right)) + 1 ;
+        return k1 ;
+    }
 
+    public Node<T> rightRightRotation(Node<T> k1){
+
+        Node<T> k2 ;
+
+        k2 = k1.right ;
+        k1.right = k2.left ;
+        k2.left = k1 ;
+
+        k2.height = max(k1.height , height(k2.right)) + 1 ;
+        k1.height = max(height(k1.left) , height(k1.right)) + 1 ;
+
+        return k2 ;
+
+    }
 
 
 }
