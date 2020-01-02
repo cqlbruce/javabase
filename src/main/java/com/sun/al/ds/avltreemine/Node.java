@@ -7,7 +7,7 @@ public class Node<T extends Comparable<T>>{
     Node<T> left ; //左孩子
     Node<T> right ; //右孩子
 
-    public Node(Node<T> left , Node<T> right , T data , int height){
+    public Node(Node<T> left , Node<T> right , T data ){
         this.left = left ;
         this.right = right ;
         this.key = data ;
