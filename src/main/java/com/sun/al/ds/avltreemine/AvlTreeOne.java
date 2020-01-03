@@ -95,17 +95,106 @@ public class AvlTreeOne<T extends Comparable<T>> {
                 }
 
             }else if(cmp > 0){
-
+                tree.right = insert(tree.right , key) ;
+                if(height(tree.left) - height(tree.right) == 2){
+                    if(key.compareTo(tree.right.key) < 0)
+                        tree = rightRightRotation(tree);
+                    else
+                        tree = rightLeftRotation(tree) ;
+                }
             }else{
                 System.out.println("添加失败:不允许添加相同的节点!");
             }
         }
+        tree.height = max(height(tree.left) , height(tree.right)) + 1 ;
+        return tree ;
+    }
 
-        return null ;
+    /*
+    * 删除结点 返回根节点
+    *
+    * tree AVL树的跟结点
+    * z 待删除的结点
+    *
+    * 返回值:
+    *   根节点
+    * */
+    public Node<T> remove(Node<T> tree , Node<T> z ){
+
+        //根为空 或者 没有要
+        if(tree==null || z==null)
+            return null ;
+
+        int cmp = z.key.compareTo(tree.key) ;
+        if(cmp < 0 ){ //待删除的结点在tree的左子树中
+            tree.left = remove(tree.left , z) ;
+            // 删除结点后，若AVL树失去平衡，则进行相应的调节
+            if(height(tree.right) - height(tree.left) == 2){
+                Node<T> node = tree.right ;
+                if(height(node.left) > height(node.right))
+                    tree = rightLeftRotation(tree);
+                else
+                    tree = leftLeftRotation(tree);
+            }
+        }else if(cmp > 0){
+            tree.right = remove(tree.right,z);
+            //删除结点后，若AVL树失去平衡，则进行相应的调节。
+            if(height(tree.left) - height(tree.right) == 2){
+                Node<T> node = tree.left ;
+                if(height(node.right) > height(node.left))
+                    tree = leftRightRotation(tree);
+                else
+                    tree = leftLeftRotation(tree);
+            }
+        }else { //tree 是对应要删除的节点
+            // tree 的左右孩子都是非空
+            if(tree.left != null && tree.right != null){
+
+                if(height(tree.left) > height(tree.right)){
+                    //代码注释是对的，但是代码错了。
+                    //应该将：AVLTreeNode<T> min = maximum(tree.right);
+                    //改为AVLTreeNode<T> min = minimum(tree.right);
+
+                    // 如果tree的左子树比右子树高；
+                    // 则(01)找出tree的左子树中的最大节点
+                    //   (02)将该最大节点的值赋值给tree。
+                    //   (03)删除该最大节点。
+                    // 这类似于用"tree的左子树中最大节点"做"tree"的替身；
+                    // 采用这种方式的好处是：删除"tree的左子树中最大节点"之后，AVL树仍然是平衡的。
+                    Node<T> max = maximum(tree.left);
+                    tree.key = max.key;
+                    tree.left = remove(tree.left, max);
+
+                }else {
+                    // 如果tree的左子树不比右子树高(即它们相等，或右子树比左子树高1)
+                    // 则(01)找出tree的右子树中的最小节点
+                    //   (02)将该最小节点的值赋值给tree。
+                    //   (03)删除该最小节点。
+                    // 这类似于用"tree的右子树中最小节点"做"tree"的替身；
+                    // 采用这种方式的好处是：删除"tree的右子树中最小节点"之后，AVL树仍然是平衡的。
+                    Node<T> min = maximum(tree.right);
+                    tree.key = min.key;
+                    tree.right = remove(tree.right, min);
+                }
+
+            }else{
+                Node<T> tmp = tree ;
+                tree = (tree.left != null ) ? tree.left : tree.right;
+                tmp = null ;
+            }
+        }
+
+        return tree ;
     }
 
 
-
+    public Node<T> maximum(Node<T> tree){
+        if(tree == null)
+            return null ;
+        while (tree.right != null)
+            tree = tree.right ;
+        return tree ;
+    }
 
 
 }
