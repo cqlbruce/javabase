@@ -1,5 +1,7 @@
 package com.sun.al.ds.tree.rbtree;
 
+import org.omg.CORBA.REBIND;
+
 /*
 https://my.oschina.net/u/3737136/blog/1649433
 * 红黑树性质:
@@ -12,6 +14,10 @@ https://my.oschina.net/u/3737136/blog/1649433
 * */
 public class RbTree<T extends Comparable<T>>  {
 
+    private RbNode<T> root ; //树的根节点
+    private int size ; //树元素个数
+    //标志叶子结点表示空节点
+    private RbNode<T> NIL = new RbNode<T>(null , null , null ,null, Color.BLACK);
 
 
 
@@ -34,13 +40,99 @@ public class RbTree<T extends Comparable<T>>  {
     }
 
     /*
-    *获取
+    *获取 祖父节点
     * */
     public RbNode grandParent(RbNode<T> n){
         if(n.parent == null) return null ;
         return n.parent.parent;
-
     }
+
+
+    public RbNode<T> min(RbNode<T> node){
+        RbNode<T> min = node ;
+        while (min != NIL)
+            min = min.left;
+        return min == NIL ? null : min ;
+    }
+
+    public T minN(RbNode<T> node){
+        RbNode<T> min = min(node);
+        return min == NIL ? null : min.key;
+    }
+
+    public T max(RbNode<T> node){
+        RbNode<T> max = maxN(node);
+        return max == NIL ? null : max.key;
+    }
+
+    public RbNode<T> maxN(RbNode<T> node){
+        RbNode<T> max = node ;
+        while (max.right != null)
+            max = node.right;
+        return max == NIL ? null : max;
+    }
+
+
+    /*
+    *
+    * 左旋以n节点为根的子树:
+    * 1、将rightChild的左子树作为n的右子树
+    * 2、将rightChild作为根
+    * 3、将n结点作为rightChild的左孩子
+    *
+    * */
+    public void leftRotate(RbNode<T> node){
+        // 1、将rightChild的左子树作为n的右子树
+        RbNode<T> rightChild = node.right;
+        node.right = rightChild.left;
+        if(rightChild.left != NIL) rightChild.left.parent = node ;
+        //2、将rightChild作为根
+        rightChild.parent = node.parent;
+        if (null == node.parent){
+            root = rightChild;
+        }else if(node.parent.left == node){
+            node.parent.left = rightChild;
+        }else{
+            node.parent.right = rightChild;
+        }
+        //3、将n结点作为rightChild的左孩子
+        rightChild.left = node;
+        node.parent = rightChild.left ;
+    }
+
+
+    /*
+    *
+    * 右旋以n节点为根节点的子树
+    *
+    *1、将leftChild右子树作为n的左子树
+    *2、将leftChild作为根节点
+    *3、将n结点作为leftChild的右子树
+    * */
+    public void rightRotate(RbNode<T> node){
+
+        RbNode<T> leftChild = node.left ;
+        //1、将leftChild右子树作为n的左子树
+        node.left = leftChild.right;
+        if(leftChild.right != null) leftChild.right.parent = node ;
+
+
+        //2、将leftChild作为根节点
+        leftChild.parent = node.parent ;
+        if(node.parent == null){
+            root = leftChild;
+        }else if(node.parent.left == node){
+            node.parent.left = leftChild;
+        }else {
+            node.parent.right = leftChild ;
+        }
+
+        //3、将n结点作为leftChild的右子树
+        leftChild.right = node;
+        node.parent = leftChild ;
+    }
+
+
 
 
 }
