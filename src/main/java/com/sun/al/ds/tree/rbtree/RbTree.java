@@ -133,6 +133,33 @@ public class RbTree<T extends Comparable<T>>  {
     }
 
 
+    /*
+    * 调整树以满足红黑树性质
+    * */
+    public void insertFixup(RbNode<T> node){
+
+        //若是树根
+        if(node.parent == null){
+            node.color = Color.BLACK ;
+            return;
+        }
+
+        // 父节点为黑色,无须调整
+        if(node.parent.color == Color.BLACK){
+            return;
+        }
+
+
+        RbNode<T> u = uncle(node);
+        RbNode<T> g = grandParent(node);
+        // 1、父节点及叔节点都为红色
+        if(u != null && u.color == Color.RED){
+
+        }
+
+
+    }
+
 
 
 }
