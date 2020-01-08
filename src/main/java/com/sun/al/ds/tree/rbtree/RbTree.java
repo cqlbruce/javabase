@@ -143,18 +143,40 @@ public class RbTree<T extends Comparable<T>>  {
             node.color = Color.BLACK ;
             return;
         }
-
         // 父节点为黑色,无须调整
         if(node.parent.color == Color.BLACK){
             return;
         }
-
-
         RbNode<T> u = uncle(node);
         RbNode<T> g = grandParent(node);
         // 1、父节点及叔节点都为红色
         if(u != null && u.color == Color.RED){
-
+            //将parent 和 uncle 颜色置BLACK
+            node.parent.color = Color.BLACK ;
+            u.color = Color.BLACK ;
+            //将grand parent置RED
+            g.color = Color.RED ;
+            //递归调整grand parent , 这时可想象grand parent 为新添加的红色节点。
+            insertFixup(g);
+        }else { //父节点P是红色而且叔节点是黑色或缺少
+            if(node == node.parent.right && node.parent == g.left){ //n 为父节点右孩子，且父节点为祖父节点的左孩子
+                //以父左旋
+                leftRotate(node.parent);
+                node = node.left ;
+            }else if(node == node.parent.left && node.parent == g.right){ // n 为父节点左孩子，且父节点为祖父节点右孩子
+                //以父右旋
+                rightRotate(node.parent);
+                node = node.right ;
+            }
+            node.parent.color = Color.BLACK ; //parent 颜色置为黑色
+            g.color = Color.RED ;
+            if(node == node.parent.left && node.parent == g.left){ // n节点为父节点的左孩子，且父节点为祖父节点的左孩子
+                //以祖父右旋
+                rightRotate(g);
+            }else { //n节点为父节点的右孩子，且父节点为祖父节点的右孩子
+                //以祖父左旋
+                leftRotate(g);
+            }
         }
 
 
