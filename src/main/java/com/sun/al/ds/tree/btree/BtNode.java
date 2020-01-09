@@ -83,4 +83,23 @@ public class BtNode<K extends Comparable<K> , V> {
     }
 
 
+    public BtNode<K , V> split(BtNode<K,V>  x){
+
+        int mid = x.mCurrentKeyNum / 2 ;
+        BtNode<K , V> left = new BtNode<>();
+        for (int i=0 ; i<mid ; i++){
+            left.mKeys[i] = x.mKeys[i];
+            left.mChildren[i] = x.mChildren[i];
+        }
+        left.mChildren[mid] = x.mChildren[mid];
+        left.mIsLeaf = x.mIsLeaf ;
+        left.mCurrentKeyNum = mid ;
+        BtNode<K , V> right = new BtNode<>();
+        for(int i = mid + 1 ; i<x.mCurrentKeyNum ; i++){
+
+        }
+
+
+    }
+
 }
