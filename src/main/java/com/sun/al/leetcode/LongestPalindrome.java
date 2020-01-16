@@ -28,18 +28,22 @@ public class LongestPalindrome {
         String str1 = "acaacc";
         String str2 = "bb";
         String str3 = "ccc";
+        String str4 = "babad";
 
-        System.out.println(longestPalindromeOne(str));
-        System.out.println(longestPalindromeOne(str1));
-        System.out.println(longestPalindromeOne(str2));
-        System.out.println(longestPalindromeOne(str3));
+
+//        System.out.println(longestPalindromeThree(str));
+//        System.out.println(longestPalindromeThree(str1));
+//        System.out.println(longestPalindromeThree(str2));
+//        System.out.println(longestPalindromeThree(str3));
+        System.out.println(longestPalindromeThree(str4));
+
 
     }
-
 
     /*
     *
     * s1: 暴力破解
+    * 时间效率 o(n*n)
     *
     * */
     public static String longestPalindromeOne(String s ){
@@ -69,6 +73,11 @@ public class LongestPalindrome {
         return maxStr ;
     }
 
+
+    /*
+    * 回文子串判断: 垃圾
+    * 建模思路很重要:我的第一次建是基于单核与双核，所以单核使用第一，双核使用第二种
+    * */
     public static String singleCore(String s , int i){
         String maxStr="";
         for (int j = 1 ; j <= i ; j ++) {
@@ -86,6 +95,9 @@ public class LongestPalindrome {
         return maxStr ;
     }
 
+    /*
+    * 回文子串判断: 垃圾
+    * */
     public static String doubleCore(String s , int i){
         String maxStr=s.substring(i - 1, i + 1);
         for (int j = 1 ; j <= i ; j ++) {
@@ -104,12 +116,77 @@ public class LongestPalindrome {
         return maxStr;
     }
 
-    public static String longestPalindromeTwo(String s){
 
-        return null ;
+    /*
+    *
+    * 思路：从每个点开始做奇，偶扩展，当扩展的长度最大时，记录left，right的index值，我的写法不是最优，因为我每次扩展返回的是string，然而实际上返回index即可。
+    *
+    * */
+    public static String longestPalindromeTwo(String s){
+        if (s == null || s.length() < 1) return "";
+        int start = 0, end = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int len1 = expandAroundCenter(s, i, i);
+            int len2 = expandAroundCenter(s, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > end - start) {
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
+            }
+        }
+        return s.substring(start, end + 1);
+    }
+    private static int expandAroundCenter(String s, int left, int right) {
+        int L = left, R = right;
+        while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+            L--;
+            R++;
+        }
+        return R - L - 1;
     }
 
 
 
+
+    // s3: 时间效率 o(n*n)
+    //思路很不错: 1、判断回文子串  2 、遍历所有字符子串，丢入方法中判断。
+    public static String longestPalindromeThree(String s){
+        if (null==s||s.length()==0||s.length()==1)
+            return s;
+        int i=0 , j=1 , size=0 , location=0;
+        while (i<(s.length()-1)&&j<s.length()){
+            if (j-i>size){
+                if(isPalindrome(s.substring(i , j+1))){
+                    size = j-i ;
+                    location = i ;
+                }
+            }
+            j++;
+            if (j==s.length()){
+                i++;
+                j=i+size;
+            }
+        }
+        return s.substring(location,location+size+1) ;
+    }
+    /*
+     *
+     * 这个思路是参考网上一朋友的，
+     * 思路为回文子串一定是离边界下标相等的两边两个元素一定是相等的，不管单核还是双核，单核会在中间相会，如其中一对不等，
+     * 则不为回文子串。
+     *
+     * */
+    public static boolean isPalindrome(String s){
+        int i = 0 , j=s.length()-1 ;
+        while (i<=j){
+            if (s.charAt(i) == s.charAt(j)){
+                i++;
+                j--;
+            }else {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
