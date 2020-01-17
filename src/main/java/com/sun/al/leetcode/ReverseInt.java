@@ -15,13 +15,15 @@ public class ReverseInt {
 
 
         String s = String.valueOf(x);
+        String res = "" ;
         if (x < 0){
-            return -Integer.parseInt(reverse(s.substring(1,s.length())));
+//            return -Integer.parseInt(reverse(s.substring(1,s.length())));
+            res = reverse(s.substring(1,s.length()));
         }
 
         if (x==0||s.length()==1)
             return x ;
-
+        res = reverse()
         return Integer.parseInt(reverse(s)) ;
     }
 
@@ -30,6 +32,8 @@ public class ReverseInt {
     *
     * 将int 转换为String
     * 然后更换首位下标
+    * 数值越界问题
+    *
     * */
     public static String reverse(String s){
         int i=0 , j=s.length()-1;
