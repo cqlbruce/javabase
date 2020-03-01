@@ -1,5 +1,7 @@
 package com.sun.al.leetcode;
 
+import java.util.Arrays;
+
 public class test {
 
 
@@ -17,6 +19,46 @@ public class test {
 //    示例例 3:
 //    输⼊入:s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"] 输出: false
 //
+
+    public static void main(String[] args) {
+
+        String s = "applepenappl";
+        String[] wordDict = {"apple", "pen"};
+
+        System.out.println(checkStr(s , wordDict));
+
+    }
+
+    public static boolean checkStr(String s , String[] wordDict){
+
+        if (s.isEmpty())
+            return true ;
+
+        boolean flag = false ;
+        for (int i =0 ; i<s.length() ; i++){
+            String ss = s.substring(0 , i+1);
+            if (Arrays.asList(wordDict).contains(ss)){
+                flag = checkStr(s.substring(i+1 , s.length()), wordDict);
+                if (flag)
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+
+
+    public int fibonacci(int n){
+
+        if (n == 1 || n == 2)
+            return 1 ;
+        else
+            return fibonacci(n-2) + fibonacci(n-1);
+    }
+
+
+
 
 
 }
