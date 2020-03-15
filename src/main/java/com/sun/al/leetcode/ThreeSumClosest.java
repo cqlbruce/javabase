@@ -40,6 +40,7 @@ public class ThreeSumClosest {
                     closest = Math.abs(sum-target);
                     res = sum ;
                 }
+                // 双端指针 一定是向着target移动
                 if (sum > target) {
                     high--;
                 }else if (sum < target)
