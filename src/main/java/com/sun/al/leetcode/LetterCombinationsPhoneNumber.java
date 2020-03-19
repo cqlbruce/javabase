@@ -12,7 +12,7 @@ public class LetterCombinationsPhoneNumber {
         //["www","wwx","wwy","wwz","wxw","wxx","wxy","wxz","wyw","wyx","wyy","wyz","wzw","wzx","wzy","wzz","xww","xwx","xwy","xwz","xxw","xxx","xxy","xxz","xyw","xyx","xyy","xyz","xzw","xzx","xzy","xzz","yww","ywx","ywy","ywz","yxw","yxx","yxy","yxz","yyw","yyx","yyy","yyz","yzw","yzx","yzy","yzz","zww","zwx","zwy","zwz","zxw","zxx","zxy","zxz","zyw","zyx","zyy","zyz","zzw","zzx","zzy","zzz"]
         //[www, wwx, wwy, wwz, wxw, wxx, wxy, wxz, wyw, wyx, wyy, wyz, wzw, wzx, wzy, wzz, xww, xwx, xwy, xwz, xxw, xxx, xxy, xxz, xyw, xyx, xyy, xyz, xzw, xzx, xzy, xzz, yww, ywx, ywy, ywz, yxw, yxx, yxy, yxz, yyw, yyx, yyy, yyz, yzw, yzx, yzy, yzz, zww, zwx, zwy, zwz, zxw, zxx, zxy, zxz, zyw, zyx, zyy, zyz, zzw, zzx, zzy, zzz]
         String input = "999";
-        System.out.println(lcp.letterCombinations(input));
+        System.out.println(lcp.letterCombinationsOne(input));
 
 
     }
