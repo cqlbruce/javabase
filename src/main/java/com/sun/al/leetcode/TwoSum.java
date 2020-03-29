@@ -14,10 +14,11 @@ public class TwoSum {
 //        for (int i : indices){
 //            System.out.print(i + ",");
 //        }
-        List<List<Integer>> lli = TwoSum.twoSum(ints , t);
-        for (List<Integer> li : lli){
-            System.out.println(li);
+        int[] arr = TwoSum.twoSum5(ints , t);
+        for (int i : arr){
+            System.out.print(i);
         }
+
     }
 
 
@@ -65,28 +66,20 @@ public class TwoSum {
     }
 
 
-    public static List<List<Integer>> twoSum(int nums[] , int target){
-        List<List<Integer>> lli = new ArrayList<>();
-        Arrays.sort(nums);
-        int low = 0 ;
-        int high = nums.length-1 ;
-        while(low < high){
-            if (nums[low] + nums[high] < target)
-                low ++ ;
-            if (nums[low] + nums[high] > target)
-                high -- ;
-            if (nums[low] + nums[high] == target){
-                List<Integer> li = new ArrayList<Integer>();
-                li.add(nums[low]);
-                li.add(nums[high]);
-                lli.add(li);
-                low++;
-                high--;
+    public static int[] twoSum5(int nums[] , int target){
+        Map<Integer,Integer> map = new HashMap<Integer, Integer>();
+        for (int i=0 ; i<nums.length ; i++){
+            if (map.containsKey(target-nums[i])){
+                if (i<map.get(target-nums[i])){
+                    return new int[]{i , map.get(target-nums[i])} ;
+                }else {
+                    return new int[]{map.get(target-nums[i]),i } ;
+                }
+            }else {
+                map.put(nums[i], i);
             }
         }
-        return  lli ;
+        return null ;
     }
-
-
 
 }
