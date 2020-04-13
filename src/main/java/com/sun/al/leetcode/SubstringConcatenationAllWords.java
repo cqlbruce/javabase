@@ -18,7 +18,7 @@ public class SubstringConcatenationAllWords {
         String[] words = {"ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba"};
 //        System.out.println(s.indexOf("foo"));
 
-        List<Integer> list = sca.findSubstringMyone(s , words);
+        List<Integer> list = sca.findSubstringMyTwo(s , words);
         System.out.println(list);
 
     }
@@ -28,20 +28,49 @@ public class SubstringConcatenationAllWords {
 
 //        for ()
         String str = words[0];
+
+        List<Integer> resList = new ArrayList<>();
         int k = 0 ;
+        int aLength = words[0].length()*words.length;
+        int strLength = words[0].length();
         while (k!=-1){
-            k = s.indexOf(s , k+1);
+            k = s.indexOf(str , k+1);
+            if (k%strLength==0){
+                int startIndex = 0 ;
+                if (k>aLength){
+                    startIndex = k - aLength;
+                }
 
+                while(startIndex<=k){
+                    boolean flag = true;
+                    String[] wordss = words;
+                    for (int i = 0 ; i<words.length ; i++){
+                        String ss = s.substring(startIndex*(1+i),startIndex*(i+1)+strLength) ;
+                        int t = contains(ss , wordss);
+                        if (t!=-1){
+                            wordss[t] = "";
+                        }
+                        if (t==-1){
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag){
+                        resList.add(startIndex);
+                    }
+                    startIndex = startIndex + strLength;
 
-        }
+                }
 
+            }
+         }
 
-        return null ;
+        return resList ;
     }
 
-    public int contains(String s , String words[]){
+    public int contains(String s , String[] words){
 
-        for (int i = 0 ; i<words.length ; i++){
+        for (int i = 0 ; i< words.length ; i++){
             if (!"".equals(words[i])&&s.equals(words[i])){
                 return i ;
             }
