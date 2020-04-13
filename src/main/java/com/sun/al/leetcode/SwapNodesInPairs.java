@@ -10,7 +10,7 @@ public class SwapNodesInPairs {
         listNode.next.next = new ListNode(3);
         listNode.next.next.next = new ListNode(4);
 
-        ListNode res = snip.swapPairsThree(listNode);
+        ListNode res = snip.swapPairsTwo(listNode);
         ListNode temp = res;
         while (temp != null){
             System.out.print(temp.val);
@@ -42,14 +42,13 @@ public class SwapNodesInPairs {
 
     // 将相邻的两个节点进行交换，在不交换值的前提条件下，只对节点指针进行交换。   时间复杂度为o(n)，空间复杂度为O(1)。
     //  思路： 可以利用链表中的哨兵机制来简化操作。具体操作步骤如下：
-
     public ListNode swapPairsTwo(ListNode head){
         if (head==null || head.next==null)
             return head;
 
         ListNode ln = new ListNode(0);
         ListNode p = ln ;
-        ln.next = head;
+        //ln.next = head;
         ListNode temp = null ;
         while (head!=null && head.next!=null){
             temp = head.next;
