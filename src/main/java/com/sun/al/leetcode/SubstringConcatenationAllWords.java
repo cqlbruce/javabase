@@ -34,18 +34,19 @@ public class SubstringConcatenationAllWords {
         int aLength = words[0].length()*words.length;
         int strLength = words[0].length();
         while (k!=-1){
-            k = s.indexOf(str , k+1);
+            k = s.indexOf(str , k);
             if (k%strLength==0){
                 int startIndex = 0 ;
                 if (k>aLength){
                     startIndex = k - aLength;
                 }
 
-                while(startIndex<=k){
+                while(startIndex<=k&&(startIndex+aLength)<=s.length()){
                     boolean flag = true;
-                    String[] wordss = words;
+                    String[] wordss = new String[words.length];
+                    System.arraycopy(words,0,wordss,0,words.length);
                     for (int i = 0 ; i<words.length ; i++){
-                        String ss = s.substring(startIndex*(1+i),startIndex*(i+1)+strLength) ;
+                        String ss = s.substring(startIndex+strLength*(1+i),startIndex+strLength*(i+1)+strLength) ;
                         int t = contains(ss , wordss);
                         if (t!=-1){
                             wordss[t] = "";
@@ -59,9 +60,11 @@ public class SubstringConcatenationAllWords {
                         resList.add(startIndex);
                     }
                     startIndex = startIndex + strLength;
-
                 }
 
+            }
+            if (k!=-1){
+                k=k+1;
             }
          }
 
