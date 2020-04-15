@@ -1,6 +1,8 @@
 package com.sun.al.leetcode;
 
 public class PernutationCombinationHolder {
+
+
         /** 数组元素的全组合 */
          void combination(char[] chars) {
             char[] subchars = new char[chars.length]; //存储子组合数据的数组
