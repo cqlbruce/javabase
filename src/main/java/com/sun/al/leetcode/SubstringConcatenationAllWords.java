@@ -18,9 +18,54 @@ public class SubstringConcatenationAllWords {
         String[] words = {"ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba","ab","ba"};
 //        System.out.println(s.indexOf("foo"));
 
-        List<Integer> list = sca.findSubstringMyTwo(s , words);
-        System.out.println(list);
+//        List<Integer> list = sca.findSubstringMyTwo(s , words);
+//        System.out.println(list);
 
+        List<String> list = new ArrayList<>();
+        sca.permutation(words , 0 , words.length-1 , list);
+        System.out.println(list.size());
+    }
+
+
+
+
+    /** 数组中从索引begin到索引end之间的子数组参与到全排列 */
+    public void permutation(String[] strs, int begin, int end , List<String> list ) {
+
+        if (begin == end) { //只剩最后一个字符时为出口
+            StringBuffer sf = new StringBuffer();
+            System.out.println("-----------" + list.size()+"--------------------------");
+
+            for (int i = 0; i < strs.length; ++i) {
+//                System.out.print(strs[i]);
+                sf.append(strs[i]);
+            }
+            list.add(sf.toString());
+//            System.out.println();
+        } else {
+            for (int i = begin; i <= end; ++i) { //每个字符依次固定到数组或子数组的第一个
+                if (canSwap(strs, begin, i)) { //去重
+                    swap(strs, begin, i); //交换
+                    permutation(strs, begin + 1, end , list); //递归求子数组的全排列
+                    swap(strs, begin, i); //还原
+                }
+            }
+        }
+    }
+
+    void swap(String[] strs, int from, int to) {
+        String temp = strs[from];
+        strs[from] = strs[to];
+        strs[to] = temp;
+    }
+
+    boolean canSwap(String[] strs, int begin, int end) {
+        for (int i = begin; i < end; ++i) {
+            if (strs[i] == strs[end]) {
+                return false;
+            }
+        }
+        return true;
     }
 
 
