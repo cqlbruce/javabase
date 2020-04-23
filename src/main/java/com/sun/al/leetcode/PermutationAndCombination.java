@@ -13,7 +13,7 @@ public class PermutationAndCombination {
 
 
 
-    public List<String> permutation(String[] ss){
+    public List<String> permutation(String[] ss , int begin , int end){
 
 
 
@@ -22,6 +22,15 @@ public class PermutationAndCombination {
         return null ;
 
     }
+
+    public void swap(String[] ss , int from , int to){
+
+        String temp = ss[from];
+        ss[from] = ss[to];
+        ss[to] = ss[from];
+    }
+
+    public
 
 
 }
