@@ -3,7 +3,7 @@ package com.sun.al.dp;
 
 /*
 *
-* ÅÀÂ¥ÌİÎÊÌâ
+*
 *
 * */
 public class ClimbStairs {
@@ -19,7 +19,7 @@ public class ClimbStairs {
 
 
 
-    //µİ¹é
+    //ï¿½İ¹ï¿½
     public static int recStairs(int n ){
 
         if (n==1||n==2)
@@ -29,7 +29,7 @@ public class ClimbStairs {
 
     }
 
-    //¶¯Ì¬¹æ»®
+    //ï¿½ï¿½Ì¬ï¿½æ»®
     public static int dpStairs(int n){
         int[] ints = new int[n];
         for (int i=0 ; i<n ; i++){

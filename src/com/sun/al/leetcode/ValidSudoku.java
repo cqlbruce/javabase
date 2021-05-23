@@ -49,9 +49,7 @@ public class ValidSudoku {
 
     public boolean isValildSudoku(char[][] board){
 
-        //行列不能有重复
-        //3x3不能有重复
-        //行不重复
+
         for (int i=0 ; i<board.length ; i++){
             Map<Character,Character> map = new HashMap<Character,Character>();
             for (int j=0 ; j<board[i].length ; j++){
@@ -61,7 +59,7 @@ public class ValidSudoku {
                 map.put(board[i][j],board[i][j]);
             }
         }
-        //列不重复
+        //
         for (int j=0 ; j<board[0].length ; j++){
             Map<Character,Character> map = new HashMap<Character,Character>();
             for (int i=0 ; i<board.length;i++){
