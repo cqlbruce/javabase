@@ -1,17 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="41ef679b-e8ed-4d46-b37b-79e4a5bb703d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/built.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/javabase.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/javabase.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/javabase.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/javabase_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/javabase_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/src.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/编程总结" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/al/IntToRoman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/al/MostWater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/al/Palindrome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/al/RegExp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/al/RomanToInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/al/cryptography/RSAUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/jvm/HeadOOM$OOMObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/jvm/HeadOOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/mybatis/JDBCUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/mybatis/Test01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/sun/mybatis/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/IntToRoman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/MostWater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/Palindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/RegExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/RomanToInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/AddTwoNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/Atoi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/BinarySearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ContainerWithMostWater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/DivideTwoInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/FourSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ImplementStr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/IntToRoman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/LengthOfLongestSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/LetterCombinationsPhoneNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ListNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/LongestCommonPrefix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/LongestPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/LongestSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/LongestValidParentheses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/MedianSorted.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/MergeKSortedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/MergeTwoSortedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/NextPerutation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/PalindromeNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/PermutationAndCombination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/PernutationCombinationHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RegularExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RegularExpressionMatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RemoveDuplicatesFromSorteArr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RemoveElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RemoveNodeFromList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ReverseInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ReverseNodesInKGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RomanToInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/RomoveNodeFromEnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/SearchInRotatedSortedArr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/SearchInsertPosition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/SearchRange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/SubstringConcatenationAllWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/SwapNodesInPairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ThreeSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ThreeSumClosest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ValidParentheses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ValidSudoku.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/ZigZagConversion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/leetcode/解题思路&amp;题型" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/avl/AVLNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/avl/AVLTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/avl/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/avl/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/cryptography/RSAUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/cryptography/RsaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/desinpattern/CGLibBeProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/desinpattern/CGLibInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/desinpattern/CGlibProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/desinpattern/Factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/desinpattern/JDKProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/hashmap/MainClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/avltree/AVLTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/avltreemine/AVLTreeNodwe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/avltreemine/AvlTreeOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/avltreemine/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTree/AbstractTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTree/BinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTree/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTreemine/BinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTreemine/BinaryTreeOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTreemine/BinaryTreeTwo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/binaryTreemine/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/btree/BTKeyValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/btree/BtNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/rbtree/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/rbtree/RbNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ds/tree/rbtree/RbTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/jvm/HeadOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/jvm/MetaSpaceOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/jvm/PermGenOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/jvm/StackOverFlow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mybatis/JDBCUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mybatis/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mybatis/User.java" beforeDir="false" />
+    </list>
+=======
     <list default="true" id="294bb12e-664f-453c-8705-822951ab3826" name="Default" comment="新增二叉树">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/al/dp/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sun/al/dp/Knapsack.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1svNfxF0b706W0G6uybLkyz6DWV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+=======
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/javabase$HeadOOM.coverage" NAME="HeadOOM Coverage Results" MODIFIED="1561005197845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.sun.jvm.*</FILTER>
@@ -130,24 +276,35 @@
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+=======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1621426515116" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RecentsManager">
-    <key name="OPEN_URL_DIALOG">
-      <recent name="http://gitlab.kaikeba.com/java/java07/01-mybatis.git" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="A:\src\javabase\src\main\java\com\sun\al" />
-    </key>
-  </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Application.CutSteel">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sun.al.leetcode.BinarySearch" />
+      <module name="javabase" />
+=======
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -172,9 +329,10 @@
       <module name="javabase_main" />
       <option name="VM_PARAMETERS" value="-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sun.jvm.*" />
+          <option name="PATTERN" value="com.sun.al.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,6 +340,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+    <configuration name="CutSteel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sun.al.dp.CutSteel" />
+      <module name="javabase" />
+=======
     <configuration name="Knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sun.al.dp.Knapsack" />
       <module name="javabase_main" />
@@ -200,9 +363,10 @@
       <option name="MAIN_CLASS_NAME" value="com.sun.al.cryptography.RSAUtil" />
       <module name="javabase_main" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sun.al.cryptography.*" />
+          <option name="PATTERN" value="com.sun.al.dp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -210,6 +374,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+    <configuration name="RunCell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sun.al.dp.RunCell" />
+      <module name="javabase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sun.al.dp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+=======
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -226,19 +401,32 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+    <configuration name="knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sun.al.dp.knapsack" />
+      <module name="javabase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sun.al.dp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CutSteel" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.knapsack" />
+        <item itemvalue="Application.RunCell" />
+=======
     <list>
       <item itemvalue="Application.HeadOOM" />
       <item itemvalue="Application.RSAUtil" />
@@ -249,6 +437,7 @@
         <item itemvalue="Application.Knapsack" />
         <item itemvalue="Application.RSAUtil" />
         <item itemvalue="Application.HeadOOM" />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
       </list>
     </recent_temporary>
   </component>
@@ -257,10 +446,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="294bb12e-664f-453c-8705-822951ab3826" name="Default" comment="" />
-      <created>1561004183498</created>
+      <changelist id="41ef679b-e8ed-4d46-b37b-79e4a5bb703d" name="Default Changelist" comment="" />
+      <created>1621749209552</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1621749209552</updated>
+      <workItem from="1621749212653" duration="4025000" />
+      <workItem from="1621754358862" duration="759000" />
+      <workItem from="1621761439310" duration="1627000" />
+=======
       <updated>1561004183498</updated>
       <workItem from="1561004188555" duration="2390000" />
       <workItem from="1561347008255" duration="1075000" />
@@ -275,6 +470,7 @@
       <workItem from="1578572717508" duration="309000" />
       <workItem from="1578573059237" duration="724000" />
       <workItem from="1621416259800" duration="2837000" />
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
     </task>
     <servers />
   </component>
@@ -319,8 +515,55 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
+<<<<<<< HEAD
+  <component name="WindowStateProjectService">
+    <state x="0" y="189" key="#Project_Structure" timestamp="1621749219239">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="189" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1621749219239" />
+    <state width="413" height="466" key="DebuggerActiveHint" timestamp="1621780379695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="413" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1621780379695" />
+    <state width="1877" height="202" key="GridCell.Tab.0.bottom" timestamp="1621780494898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621780494898" />
+    <state width="1877" height="202" key="GridCell.Tab.0.center" timestamp="1621780494898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621780494898" />
+    <state width="1877" height="202" key="GridCell.Tab.0.left" timestamp="1621780494898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621780494898" />
+    <state width="1877" height="202" key="GridCell.Tab.0.right" timestamp="1621780494898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="202" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621780494898" />
+    <state width="1877" height="283" key="GridCell.Tab.1.bottom" timestamp="1621780480516">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621780480516" />
+    <state width="1877" height="283" key="GridCell.Tab.1.center" timestamp="1621780480516">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621780480516" />
+    <state width="1877" height="283" key="GridCell.Tab.1.left" timestamp="1621780480516">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621780480516" />
+    <state width="1877" height="283" key="GridCell.Tab.1.right" timestamp="1621780480516">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621780480516" />
+    <state x="662" y="223" width="596" height="594" key="find.popup" timestamp="1621761343439">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="223" width="596" height="594" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1621761343439" />
+=======
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -374,5 +617,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 13a13df215ba7e458401feb265c6a8920ec2fda3
   </component>
 </project>
