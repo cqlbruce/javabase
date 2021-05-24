@@ -3,8 +3,6 @@ package com.sun.al.dp;
 
 /*
 *
-*
-*
 * */
 public class ClimbStairs {
 
@@ -29,7 +27,7 @@ public class ClimbStairs {
 
     }
 
-    //��̬�滮
+    //
     public static int dpStairs(int n){
         int[] ints = new int[n];
         for (int i=0 ; i<n ; i++){
