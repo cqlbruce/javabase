@@ -1,4 +1,4 @@
-package com.sun.al.dp;
+package sun.al.dp;
 
 /*
 *

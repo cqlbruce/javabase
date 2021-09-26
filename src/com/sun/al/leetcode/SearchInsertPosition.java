@@ -1,4 +1,4 @@
-package com.sun.al.leetcode;
+package sun.al.leetcode;
 
 public class SearchInsertPosition {
 
