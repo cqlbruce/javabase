@@ -9,9 +9,65 @@ public class LongestValidParentheses {
         LongestValidParentheses lvp = new LongestValidParentheses();
         //"()(())"
         //"()(()"
-        System.out.println(lvp.longestValidParenthesesOne("()(())"));
+
+//        String str = "12&&&3456&78";
+//        String[] ss = str.split("&");
+//        System.out.println(ss.length);
+        //"()(())"  ")(((((()())()()))()(()))("
+        System.out.println(lvp.lvp(")(((((()())()()))()(()))("));
 
     }
+
+
+    public static int lvp(String s){
+
+        if (null==s||s.isEmpty())
+            return 0 ;
+
+        Stack<Integer> stack = new Stack<Integer>();
+        int[] ints = new int[s.length()];
+        for (int i=0 ; i<s.length();i++){
+            ints[i]= -1 ;
+            if (s.charAt(i)=='('){
+                stack.push(i);
+            }
+
+            if (stack.size()>0&&s.charAt(i)==')'){
+                int p = stack.peek();
+                if (i-p==1){
+                    ints[i-1]=p;
+                    ints[i] = i;
+                }else if(p+1==ints[p+1]){
+                    ints[p]=p;
+                    ints[i]=i;
+                }
+                stack.pop();
+            }
+
+        }
+
+        String str ="";
+        for (int i : ints){
+            if (i==-1){
+                str = str + "&" ;
+            }else {
+                str = str + "a" ;
+            }
+        }
+        String[] ss = str.split("&");
+        int sum = 0  ;
+        for (int i=0 ; i<ss.length ; i++){
+            if (ss[i].length()>sum){
+                sum = ss[i].length();
+            }
+        }
+        return sum;
+    }
+
+
+
+
+
 
     public int longestValidParenthesesTwo(String s){
         if (s==null||s.length()==0)
